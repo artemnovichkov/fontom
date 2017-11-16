@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		062583E81FBD810F008526AD /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 062583E61FBD810F008526AD /* Fabric.framework */; };
+		062583E91FBD810F008526AD /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 062583E71FBD810F008526AD /* Crashlytics.framework */; };
 		06F394301FBD6B2900B9EB0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F3942F1FBD6B2900B9EB0F /* AppDelegate.swift */; };
 		06F394321FBD6B2900B9EB0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F394311FBD6B2900B9EB0F /* ViewController.swift */; };
 		06F394351FBD6B2900B9EB0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06F394331FBD6B2900B9EB0F /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		062583E61FBD810F008526AD /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		062583E71FBD810F008526AD /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		06F3942C1FBD6B2900B9EB0F /* Fontom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fontom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F3942F1FBD6B2900B9EB0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06F394311FBD6B2900B9EB0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,12 +43,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				062583E91FBD810F008526AD /* Crashlytics.framework in Frameworks */,
+				062583E81FBD810F008526AD /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		062583E51FBD810F008526AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				062583E61FBD810F008526AD /* Fabric.framework */,
+				062583E71FBD810F008526AD /* Crashlytics.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 		06F394231FBD6B2800B9EB0F = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +79,7 @@
 		06F3942E1FBD6B2900B9EB0F /* Fontom */ = {
 			isa = PBXGroup;
 			children = (
+				062583E51FBD810F008526AD /* Frameworks */,
 				06F394411FBD6B4B00B9EB0F /* Fonts */,
 				06F3944A1FBD6B6D00B9EB0F /* UIFont+ApplicationFonts.swift */,
 				06F3942F1FBD6B2900B9EB0F /* AppDelegate.swift */,
@@ -97,6 +113,7 @@
 				06F394281FBD6B2900B9EB0F /* Sources */,
 				06F394291FBD6B2900B9EB0F /* Frameworks */,
 				06F3942A1FBD6B2900B9EB0F /* Resources */,
+				06F3944C1FBD807400B9EB0F /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -157,6 +174,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06F3944C1FBD807400B9EB0F /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Fabric;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fontom/Frameworks/Fabric.framework/run 3cdae362b7ce8e2bba9af1acf852c61145446a0a 72328d89cc33c127fe79edaee7b76bfd54d6a4943250bda1b06c6fa603320cd1";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		06F394281FBD6B2900B9EB0F /* Sources */ = {
@@ -304,6 +338,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GPVA8JVMU3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Fontom/Frameworks",
+				);
 				INFOPLIST_FILE = Fontom/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -320,6 +359,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GPVA8JVMU3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Fontom/Frameworks",
+				);
 				INFOPLIST_FILE = Fontom/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
